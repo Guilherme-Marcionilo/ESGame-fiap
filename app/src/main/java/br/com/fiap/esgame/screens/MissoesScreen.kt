@@ -18,6 +18,7 @@ import br.com.fiap.esgame.ui.theme.BluePrimary
 import br.com.fiap.esgame.ui.theme.GreenHighlight
 import kotlinx.coroutines.launch
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MissoesScreen() {
     val drawerState = rememberDrawerState(DrawerValue.Closed)
@@ -62,6 +63,7 @@ fun TopBar(onMenuClick: () -> Unit) {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchBar() {
     OutlinedTextField(
