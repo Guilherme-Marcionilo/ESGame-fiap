@@ -1,5 +1,6 @@
 package br.com.fiap.esgame.screens
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -25,9 +26,9 @@ fun MenuScreen(onItemClick: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxHeight()
-            .width(300.dp)
+            .fillMaxWidth()
             .background(BluePrimary)
-            .padding(16.dp)
+            .padding(18.dp)
     ) {
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
             IconButton(onClick = onItemClick) {
@@ -43,17 +44,17 @@ fun MenuScreen(onItemClick: () -> Unit) {
                 painter = painterResource(id = R.drawable.user),
                 contentDescription = "Imagem do usuário",
                 modifier = Modifier
-                    .size(50.dp)
+                    .size(60.dp)
                     .clip(CircleShape)
             )
-            Spacer(modifier = Modifier.width(16.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(
-                    text = "Nome Sobrenome",
+                    text = "Guilherme Sobrenome",
                     color = Color.White,
                     fontSize = 18.sp
                 )
-                Spacer(modifier = Modifier.height(4.dp))
+                Spacer(modifier = Modifier.height(8.dp))
                 Button(
                     onClick = {},
                     colors = ButtonDefaults.buttonColors(containerColor = Color.Gray),
@@ -66,26 +67,26 @@ fun MenuScreen(onItemClick: () -> Unit) {
                 }
             }
         }
-        Spacer(modifier = Modifier.height(30.dp))
+        Spacer(modifier = Modifier.height(40.dp))
         DrawerItem("Início", R.drawable.icone_inicio, onItemClick)
-        Spacer(modifier = Modifier.height(6.dp))
+        Spacer(modifier = Modifier.height(8.dp))
         DrawerItem("Ranking", R.drawable.icone_ranking, onItemClick)
-        Spacer(modifier = Modifier.height(6.dp))
+        Spacer(modifier = Modifier.height(8.dp))
         DrawerItem("Missões", R.drawable.icone_missao, onItemClick)
-        Spacer(modifier = Modifier.height(6.dp))
+        Spacer(modifier = Modifier.height(8.dp))
         DrawerItem("Conquistas", R.drawable.icone_conquista, onItemClick)
-        Spacer(modifier = Modifier.height(6.dp))
+        Spacer(modifier = Modifier.height(8.dp))
         DrawerItem("Recompensas/Loja", R.drawable.icone_recompensa, onItemClick)
-        Spacer(modifier = Modifier.height(6.dp))
+        Spacer(modifier = Modifier.height(8.dp))
         DrawerItem("Configurações", R.drawable.icone_configuracao, onItemClick)
-        Spacer(modifier = Modifier.height(6.dp))
+        Spacer(modifier = Modifier.height(8.dp))
         DrawerItem("Sair", R.drawable.icone_sair, onItemClick)
         Spacer(modifier = Modifier.weight(2f))
         Image(
             painter = painterResource(id = R.drawable.logo_esgame),
             contentDescription = "Logo ESGame",
             modifier = Modifier
-                .size(120.dp)
+                .size(140.dp)
                 .align(Alignment.CenterHorizontally)
         )
     }
