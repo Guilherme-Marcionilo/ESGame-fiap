@@ -9,3 +9,7 @@ data class Endereco(
     val bairro: String = "",
     val uf: String = ""
 )
+
+fun Endereco.isValid(): Boolean {
+    return listOf(cep, rua, cidade, bairro, uf).all { it.isNotBlank() }
+}
